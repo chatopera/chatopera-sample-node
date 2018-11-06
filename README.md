@@ -54,7 +54,7 @@ npm install
 <p align="center">
   <b>上传知识库文件</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
-      <img src="https://user-images.githubusercontent.com/3538629/48043431-a05a2480-e1c1-11e8-83ec-2167ead0aa41.png" width="800">
+      <img src="https://user-images.githubusercontent.com/3538629/48044619-c97db380-e1c7-11e8-841b-b00ca6e29185.png" width="800">
   </a>
 </p>
 
@@ -81,7 +81,7 @@ npm install
 <p align="center">
   <b>显示Secret</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
-      <img src="https://user-images.githubusercontent.com/3538629/48044059-e06ed680-e1c4-11e8-8a33-27514a66250e.png" width="800">
+      <img src="https://user-images.githubusercontent.com/3538629/48044641-f4680780-e1c7-11e8-889e-01df6b0cbd7f.png" width="800">
   </a>
 </p>
 
@@ -130,6 +130,14 @@ client.conversation('用户唯一标识', '用户输入').then( // 返回值为 
 node index.js --help
 ```
 
+## 集成
+
+<p align="center">
+  <b>更多集成机器人方案</b><br>
+  <a href="http://bot.chatopera.com/" target="_blank">
+      <img src="https://user-images.githubusercontent.com/3538629/48044669-1e212e80-e1c8-11e8-918c-8e6fdf4e95c0.png" width="800">
+  </a>
+</p>
 
 ## 开源许可协议
 
