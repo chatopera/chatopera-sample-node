@@ -1,8 +1,21 @@
 # [chatopera-sample-node](https://github.com/chatopera/chatopera-sample-node)
 企业聊天机器人-Node.js端示例程序
 
-本文档介绍如何使用Chatopera机器人开发者平台的[Node.js SDK](https://www.npmjs.com/package/@chatopera/sdk)与机器人进行集成。
+本教程介绍如何使用Chatopera机器人开发者平台的[Node.js SDK](https://www.npmjs.com/package/@chatopera/sdk)与机器人进行集成，阅读本教程需要20分钟时间。
 
+[获取源码](#获取源码)
+
+[安装](#安装)
+
+[创建机器人](#创建机器人)
+
+[执行程序](#执行程序)
+
+[帮助](#帮助)
+
+[更多SDK](#更多SDK)
+
+[开源许可协议](#开源许可协议)
 
 ## 获取源码
 
@@ -17,7 +30,7 @@ cd chatopera-sample-node
 npm install
 ```
 
-## 获取密钥
+## 创建机器人
 
 <p align="center">
   <b>登录Chatopera聊天机器人平台</b><br>
@@ -27,11 +40,11 @@ npm install
 </p>
 
 
-* 点击“立即使用”
+### 点击“立即使用”
 
-【提示】第一登录输入“邮箱”和“密码”，点击“回车键”，完成账户创建
+第一登录输入“邮箱”和“密码”，点击“回车键”，完成账户创建。
 
-* 创建聊天机器人
+### 创建聊天机器人
 
 点击“创建机器人”，并填入下面各项：
 
@@ -44,28 +57,28 @@ npm install
 【提示】其它项如兜底回复，问候语可以在创建后，设置页面修改。
 
 
-* 下载知识库文件
+### 下载知识库文件
 
 下载知识库示例文件[保全作业中常见问题.csv](https://raw.githubusercontent.com/chatopera/chatbot-sales/master/%E4%BF%9D%E9%99%A9/faq/%E4%BF%9D%E5%85%A8%E4%BD%9C%E4%B8%9A%E4%B8%AD%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.csv)，保存文件名为*保全作业中常见问题.csv*。
 
 
-* 导入知识库
+### 导入知识库
 
 <p align="center">
   <b>上传知识库文件</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
-      <img src="https://user-images.githubusercontent.com/3538629/48044619-c97db380-e1c7-11e8-841b-b00ca6e29185.png" width="800">
+      <img src="https://user-images.githubusercontent.com/3538629/48044619-c97db380-e1c7-11e8-841b-b00ca6e29185.png" width="500">
   </a>
 </p>
 
 选择*保全作业中常见问题.csv*，这时，会显示问答对列表，点击“提交”，在进度条完成后，知识库导入成功。
 
-* 测试知识库
+### 测试知识库
 
 <p align="center">
   <b>知识库测试窗口</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
-      <img src="https://user-images.githubusercontent.com/3538629/48043965-5161be80-e1c4-11e8-99c6-53f36fc5e29a.png" width="400">
+      <img src="https://user-images.githubusercontent.com/3538629/48043965-5161be80-e1c4-11e8-99c6-53f36fc5e29a.png" width="300">
   </a>
 </p>
 
@@ -73,7 +86,7 @@ npm install
 
 确认得到回复。
 
-* 获取*ClientId*和*Secret*
+### 获取*ClientId*和*Secret*
 
 集成机器人服务的方式是通过SDK，每个机器人实例需要通过*ClientId*和*Secret*初始化，完成认证和授权。打开机器人【设置】页面，拷贝*ClientId*和*Secret*。
 
@@ -88,8 +101,7 @@ npm install
 
 ## 执行程序
 
-**准备：** Client Id 和 Client Secret，[获得方法]()。
-
+假设您已经准备好**ClientId**和**Secret**了，进入项目路径然后执行下面命令。
 
 ```
 cd chatopera-sample-node
@@ -121,19 +133,21 @@ client.conversation('用户唯一标识', '用户输入').then( // 返回值为 
 );
 ```
 
-
 更多接口介绍请访问[SDK文档](https://www.npmjs.com/package/@chatopera/sdk)。
 
 
 ## 帮助
+
+获得命令提示信息。
+
 ```
 node index.js --help
 ```
 
-## 集成
+## 更多SDK
 
 <p align="center">
-  <b>更多集成机器人方案</b><br>
+  <b>集成面板</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
       <img src="https://user-images.githubusercontent.com/3538629/48044669-1e212e80-e1c8-11e8-918c-8e6fdf4e95c0.png" width="800">
   </a>
