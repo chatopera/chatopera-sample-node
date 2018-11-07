@@ -13,7 +13,7 @@
     "chatopera-bot": "index.js"
   },
   "dependencies": {
-    "@chatopera/sdk": "^1.0.3",
+    "@chatopera/sdk": "^1.1.0",
     "commander": "^2.19.0",
     "inquirer": "^6.2.0"
   }
