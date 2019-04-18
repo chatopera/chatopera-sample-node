@@ -5,10 +5,10 @@ const inquirer = require('inquirer');
 const Chatopera = require('@chatopera/sdk');
 
 program
-  .version('0.0.1')
-  .arguments('<clientId> <secret>')
+  .version('0.0.2')
+  .arguments('<clientId> [secret]')
   .action((clientId, secret) => {
-    if (clientId && secret) {
+    if (clientId) {
       let client = new Chatopera(clientId, secret);
 
       let prompt = () => {
@@ -30,7 +30,7 @@ program
 
       prompt();
     } else {
-      console.error('clientId and secret is required');
+      console.error('clientId is required');
     }
   })
   .parse(process.argv);
