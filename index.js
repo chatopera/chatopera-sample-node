@@ -17,7 +17,12 @@ program
           .prompt({ name: "send", message: "Me:" })
           .then(function (answers) {
             client
-              .conversation("xiao", answers.send)
+              .command("POST", "/conversation/query", {
+                fromUserId: "samplenode",
+                textMessage: answers.send,
+                faqBestReplyThreshold: 0.7,
+                faqSuggReplyThreshold: 0.1,
+              })
               .then((res) => {
                 debug("response %s", JSON.stringify(res, null, " "));
                 console.log("Bot:", res.data.string);

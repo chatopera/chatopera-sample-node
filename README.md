@@ -1,8 +1,3 @@
-<p align="center">
-  <b>Chatopera开发者平台：809987971， <a href="https://jq.qq.com/?_wv=1027&k=5S51T2a" target="_blank">点击链接加入群聊</a></b><br>
-  <img src="https://user-images.githubusercontent.com/3538629/48105854-0bfcca00-e274-11e8-8eb4-ffb46a2c9179.png" width="200">
-</p>
-
 # [chatopera-sample-node](https://github.com/chatopera/chatopera-sample-node)
 
 企业聊天机器人-Node.js 端示例程序
@@ -39,7 +34,7 @@ npm install
 ## 创建机器人
 
 <p align="center">
-  <b>登录Chatopera聊天机器人平台</b><br>
+  <b>登录 Chatopera 聊天机器人平台</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
       <img src="https://user-images.githubusercontent.com/3538629/48039685-e35fcc00-e1b0-11e8-81a9-f26d744fcd1d.png" width="800">
   </a>
