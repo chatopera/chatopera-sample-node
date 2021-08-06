@@ -3,11 +3,11 @@
   <img src="https://user-images.githubusercontent.com/3538629/48105854-0bfcca00-e274-11e8-8eb4-ffb46a2c9179.png" width="200">
 </p>
 
-
 # [chatopera-sample-node](https://github.com/chatopera/chatopera-sample-node)
-企业聊天机器人-Node.js端示例程序
 
-本教程介绍如何使用Chatopera机器人开发者平台的[Node.js SDK](https://www.npmjs.com/package/@chatopera/sdk)与机器人进行集成，阅读本教程需要20分钟时间。
+企业聊天机器人-Node.js 端示例程序
+
+本教程介绍如何使用 Chatopera 机器人开发者平台的[Node.js SDK](https://www.npmjs.com/package/@chatopera/sdk)与机器人进行集成，阅读本教程需要 20 分钟时间。
 
 [获取源码](#获取源码)
 
@@ -19,7 +19,7 @@
 
 [帮助](#帮助)
 
-[更多SDK](#更多SDK)
+[更多 SDK](#更多SDK)
 
 [开源许可协议](#开源许可协议)
 
@@ -45,7 +45,6 @@ npm install
   </a>
 </p>
 
-
 ### 点击“立即使用”
 
 第一登录输入“邮箱”和“密码”，点击“回车键”，完成账户创建。
@@ -54,19 +53,17 @@ npm install
 
 点击“创建机器人”，并填入下面各项：
 
-| 项目 | 值 | 描述 |
-| --- | --- | --- |
-| 机器人名称 | 小松 | 机器人的名字 |
-| 描述 | 机器人示例 | 机器人的描述 |
-| 语言 | zh_CN | 机器人的语言，目前支持中文(zh_CN)和英文(en_US) |
+| 项目       | 值         | 描述                                           |
+| ---------- | ---------- | ---------------------------------------------- |
+| 机器人名称 | 小松       | 机器人的名字                                   |
+| 描述       | 机器人示例 | 机器人的描述                                   |
+| 语言       | zh_CN      | 机器人的语言，目前支持中文(zh_CN)和英文(en_US) |
 
 【提示】其它项如兜底回复，问候语可以在创建后，设置页面修改。
-
 
 ### 下载知识库文件
 
 下载知识库示例文件[保全作业中常见问题.xlsx](https://github.com/chatopera/chatbot-sales/raw/master/%E4%BF%9D%E9%99%A9/faq/%E4%BF%9D%E5%85%A8%E4%BD%9C%E4%B8%9A%E4%B8%AD%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.xlsx)，保存文件名为*保全作业中常见问题.xlsx*。
-
 
 ### 导入知识库
 
@@ -88,14 +85,13 @@ npm install
   </a>
 </p>
 
-**输入：** 保全作业中常见问题 
+**输入：** 保全作业中常见问题
 
 确认得到回复。
 
 ### 获取*ClientId*和*Secret*
 
-集成机器人服务的方式是通过SDK，每个机器人实例需要通过*ClientId*和*Secret*初始化，完成认证和授权。打开机器人【设置】页面，拷贝*ClientId*和*Secret*。
-
+集成机器人服务的方式是通过 SDK，每个机器人实例需要通过*ClientId*和*Secret*初始化，完成认证和授权。打开机器人【设置】页面，拷贝*ClientId*和*Secret*。
 
 <p align="center">
   <b>显示Secret</b><br>
@@ -103,7 +99,6 @@ npm install
       <img src="https://user-images.githubusercontent.com/3538629/48044641-f4680780-e1c7-11e8-889e-01df6b0cbd7f.png" width="800">
   </a>
 </p>
-
 
 ## 执行程序
 
@@ -114,13 +109,19 @@ cd chatopera-sample-node
 node index.js *ClientId* *Secret*
 ```
 
+如果想查看机器人平台返回结果的日志：
+
+```
+cd chatopera-sample-node
+DEBUG=chatopera:sample:node node index.js *ClientId* *Secret*
+```
+
 <p align="center">
   <b>与机器人对话</b><br>
   <a href="http://bot.chatopera.com/" target="_blank">
       <img src="https://user-images.githubusercontent.com/3538629/48044246-edd89080-e1c5-11e8-9a28-ebb65dc496da.png" width="800">
   </a>
 </p>
-
 
 ## 程序介绍
 
@@ -129,7 +130,7 @@ node index.js *ClientId* *Secret*
 ```
 var Chatopera = require('@chatopera/sdk'); # 引入SDK
 var client = new Chatopera(clientId, secret); # 创建机器人实例
-client.conversation('用户唯一标识', '用户输入').then( // 返回值为 Promise 类型 
+client.conversation('用户唯一标识', '用户输入').then( // 返回值为 Promise 类型
     (resp) => {
         resp.string // 机器人回复
     },
@@ -139,8 +140,7 @@ client.conversation('用户唯一标识', '用户输入').then( // 返回值为 
 );
 ```
 
-更多接口介绍请访问[SDK文档](https://www.npmjs.com/package/@chatopera/sdk)。
-
+更多接口介绍请访问[SDK 文档](https://www.npmjs.com/package/@chatopera/sdk)。
 
 ## 帮助
 
@@ -150,7 +150,7 @@ client.conversation('用户唯一标识', '用户输入').then( // 返回值为 
 node index.js --help
 ```
 
-## 更多SDK
+## 更多 SDK
 
 <p align="center">
   <b>集成面板</b><br>
@@ -171,6 +171,3 @@ Copyright 2017-2018, [北京华夏春松科技有限公司](https://www.chatoper
 
 [co-banner-image]: https://user-images.githubusercontent.com/3538629/42383104-da925942-8168-11e8-8195-868d5fcec170.png
 [co-url]: https://www.chatopera.com
-
-
-

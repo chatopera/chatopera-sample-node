@@ -1,25 +1,26 @@
 #!/usr/bin/env node
 
-const program = require('commander');
-const inquirer = require('inquirer');
-const Chatopera = require('@chatopera/sdk');
+const program = require("commander");
+const inquirer = require("inquirer");
+const { Chatbot } = require("@chatopera/sdk");
+const debug = require("debug")("chatopera:sample:node");
 
 program
-  .version('0.0.2')
-  .arguments('<clientId> [secret]')
+  .version("1.0.0")
+  .arguments("<clientId> [secret]")
   .action((clientId, secret) => {
     if (clientId) {
-      let client = new Chatopera(clientId, secret);
+      let client = new Chatbot(clientId, secret);
 
       let prompt = () => {
         inquirer
-          .prompt({ name: 'send', message: 'Text' })
-          .then(function(answers) {
+          .prompt({ name: "send", message: "Me:" })
+          .then(function (answers) {
             client
-              .conversation('xiao', answers.send)
-              .then(res => {
-                console.log(res);
-                console.log('Bot:', res.string);
+              .conversation("xiao", answers.send)
+              .then((res) => {
+                debug("response %s", JSON.stringify(res, null, " "));
+                console.log("Bot:", res.data.string);
               })
               .catch(console.error)
               .then(() => {
@@ -30,7 +31,7 @@ program
 
       prompt();
     } else {
-      console.error('clientId is required');
+      console.error("clientId is required");
     }
   })
   .parse(process.argv);

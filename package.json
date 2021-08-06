@@ -8,12 +8,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "Apache2",
   "bin": {
     "chatopera-bot": "index.js"
   },
   "dependencies": {
+    "@chatopera/sdk": "^2.6.1",
     "commander": "^2.19.0",
+    "debug": "^4.3.2",
     "inquirer": "^6.2.0"
   }
 }
